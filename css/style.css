@@ -8,13 +8,28 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
+.wrapper {
+    padding: 5% 0;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.sectionsWrapper,
+.articlesWrapper, 
+.formGroup {
+    display: flex;
+    flex-direction: column;
+}
+section, article, input, textarea, .formGroup {
+    margin: 0 1%;
+}
 nav.flexMenu {
   display: flex;
   flex-direction: row;
@@ -35,4 +50,3 @@ nav.flexMenu a:active {
 nav.flexMenu a.active {
   color: rgba(255, 0, 128, 1);
   border-bottom: 2pt solid rgba(255, 0, 128, 1);
-}
