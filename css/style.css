@@ -1,5 +1,18 @@
+:root {
+  --light-bg-color: #ffffff;
+  --secondary-bg-light-bg-color: rgba(0, 0, 0, 0.1);
+  --dark-bg-color: #000000;
+
+  --main-heading-color: rgba(0, 0, 0, 0.1);
+
+  --light-text-color: #ffffff;
+  --secondary-dark-text-color: rgba(0, 0, 0, 0.2);
+  --main-dark-text-color: rgba(0, 0, 0, 0.85);
+}
+
 body {
   font-family: "Noto Sans JP", sans-serif;
+  color: var(--dark-primay-text-color);
 }
 
 h1,
@@ -8,27 +21,77 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  color: var(--main-heading-color);
+  text-transform: uppercase;
+  font-weight: bolder;
 }
 
-a {
-    text-decoration: none;
+button {
+  width: 100%;
 }
 
 .wrapper {
-    padding: 5% 0;
-    width: 100%;
-    margin: 0 auto;
+  padding: 5% 0;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .sectionsWrapper,
-.articlesWrapper, 
+.articlesWrapper,
 .formGroup {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
-section, article, input, textarea, .formGroup {
-    margin: 0 1%;
+
+input {
+  height: 40px;
+  margin: 0.5% 0 4%;
+}
+
+textarea {
+  height: 26px;
+  padding-top: 1%;
+  margin: 0 0 4% 0;
+}
+
+input,
+textarea {
+  outline: none;
+  border: none;
+  border-radius: 0;
+  border-bottom: 3pt solid var(--main-dark-text-color);
+  background: var(--light-bg-color);
+}
+
+input:focus,
+textarea:focus,
+input:hover,
+textarea:hover {
+  background: var(--secondary-bg-light-bg-color);
+  transition: background 7s;
+  transition-timing-function: cubic-bezier(0.17, 0.67, 1, 1.48);
+}
+
+input:focus,
+textarea:focus {
+  border-bottom: 1pt solid var(--main-dark-text-color);
+  transition: border 2s;
+  transition-timing-function: cubic-bezier(0.17, 0.67, 1, 1.48);
+}
+
+header div {
+  background-color: var(--dark-bg-color);
+  height: 26px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section,
+article {
+  margin: 0 1%;
 }
 nav.flexMenu {
   display: flex;
@@ -37,16 +100,23 @@ nav.flexMenu {
 }
 
 nav.flexMenu a {
-  color: rgba(255, 0, 128, 0.3);
+  padding: 13px;
+  font-weight: bolder;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+
+  text-decoration: none;
+  color: var(--secondary-dark-text-color);
 }
 
 nav.flexMenu a:hover,
 nav.flexMenu a:active {
-  color: rgba(255, 0, 128, 1);
+  color: var(--main-dark-text-color);
   transition: color 2s;
   transition-timing-function: cubic-bezier(0.17, 0.67, 1, 1.48);
 }
 
 nav.flexMenu a.active {
-  color: rgba(255, 0, 128, 1);
-  border-bottom: 2pt solid rgba(255, 0, 128, 1);
+  color: var(--main-dark-text-color);
+  border-bottom: 3pt solid var(--main-dark-text-color);
+}
