@@ -48,6 +48,25 @@ h6 {
   flex-direction: column;
 }
 
+.carrousel {
+  display: flex;
+  flex-direction: row;
+  overflow-y: hidden;
+}
+
+.carrousel .carrouselItem {
+  margin: 6% 2%;
+  border-radius: 5%;
+}
+.carrousel .carrouselItem img {
+  max-height: 100%;
+  width: auto;
+  max-width: 50vw;
+  -webkit-box-shadow: 0px 4px 19px 3px rgba(0, 0, 0, 0.68);
+  -moz-box-shadow: 0px 4px 19px 3px rgba(0, 0, 0, 0.68);
+  box-shadow: 0px 4px 19px 3px rgba(0, 0, 0, 0.68);
+}
+
 input {
   height: 40px;
   margin: 1% 0 4%;
@@ -115,9 +134,9 @@ nav.flexMenu {
   flex-direction: row;
   justify-content: space-around;
   background-color: var(--light-bg-color);
-  -webkit-box-shadow: 0px 10px 16px 0px rgba(71, 71, 71, 1);
-  -moz-box-shadow: 0px 10px 16px 0px rgba(71, 71, 71, 1);
-  box-shadow: 0px 10px 16px 0px rgba(71, 71, 71, 1);
+  -webkit-box-shadow: 0px 4px 19px 3px rgba(0, 0, 0, 0.68);
+  -moz-box-shadow: 0px 4px 19px 3px rgba(0, 0, 0, 0.68);
+  box-shadow: 0px 4px 19px 3px rgba(0, 0, 0, 0.68);
 }
 
 nav.flexMenu a {
