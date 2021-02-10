@@ -7,7 +7,7 @@
 
   --light-text-color: #ffffff;
   --secondary-dark-text-color: rgba(0, 0, 0, 0.2);
-  --main-dark-text-color: rgba(0, 0, 0, 0.85);
+  --main-dark-text-color: rgba(0, 0, 0, 1);
 }
 
 h1,
@@ -20,6 +20,8 @@ h6 {
   color: var(--main-heading-color);
   text-transform: uppercase;
   font-weight: bolder;
+  letter-spacing: 0.02em;
+  line-height: 1.2em;
 }
 
 p {
@@ -43,6 +45,10 @@ main {
 
 main p {
   font-weight: 100;
+}
+
+.biggerFontSize {
+  font-size: 2em;
 }
 
 .colorBlack {
@@ -70,7 +76,7 @@ main p {
 
 .carrousel .carrouselItem {
   margin: 6% 2%;
-  border-radius: 5%;
+  transform: translateX(-58%);
 }
 
 .carrousel .carrouselItem a {
@@ -80,6 +86,7 @@ main p {
 .carrousel .carrouselItem a h3 {
   text-decoration: none;
   color: inherit;
+  padding-left: 3%;
 }
 
 .carrousel .carrouselItem a:hover h3,
@@ -91,6 +98,7 @@ main p {
 
 .carrousel .carrouselItem img {
   max-height: 100%;
+  border-radius: 3%;
   width: auto;
   max-width: 50vw;
   -webkit-box-shadow: 0px 4px 19px 3px rgba(0, 0, 0, 0.68);
@@ -161,6 +169,7 @@ nav.flexMenu {
 
 nav.flexMenu {
   top: 30px;
+  z-index: 200;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -191,47 +200,46 @@ nav.flexMenu a.active {
   border-bottom: 3pt solid var(--main-dark-text-color);
 }
 
+#contact .formWrapper:first-of-type {
+  margin: 1em;
+}
+
 footer {
-  text-align: center;
   color: var(--secondary-dark-text-color);
+  text-align: center;
+}
+
+/* ------------------- ANIMATIOS ------------------- */
+
+.carrousel .carrouselItem {
+  animation: translateleftToRight 4s;
+}
+
+@keyframes translateleftToRight {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /* ------------------- MEDIA QUERIES ------------------- */
 
-/* Less than 360 */
-
-/* @media screen and (min-width: 360px) {
-  .wrapper {
-  }
-} */
-
-/* From 361 to 960 */
-
-/* @media screen and (min-width: 961px) {
-  .wrapper {
-    width: 90%;
-
-    background-color: green;
-  }
-}
-
-/* From 961 to 960 */
-
-/* @media screen and (min-width: 961px) {
-  .wrapper {
-    width: 90%;
-  }
-} */
-
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
-  ...;
+  #home h1 {
+    width: 80%;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   .wrapper {
     width: 90%;
+  }
+  #home h1 {
+    font-size: 5em;
   }
 
   #contact .formWrapper > form > .formGroup:first-of-type {
@@ -268,5 +276,7 @@ footer {
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-  ...;
+  .wrapper {
+    width: 1170px;
+  }
 }
