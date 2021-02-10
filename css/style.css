@@ -22,6 +22,12 @@ h6 {
   font-weight: bolder;
 }
 
+p {
+  font-size: 1.1em;
+  line-height: 1.5em;
+  letter-spacing: 0.01em;
+}
+
 a {
   color: var(--secondary-dark-text-color);
 }
@@ -35,13 +41,17 @@ main {
   padding-top: 78px;
 }
 
+main p {
+  font-weight: 100;
+}
+
 .colorBlack {
   color: var(--main-dark-text-color);
 }
 
 .wrapper {
   padding: 5% 0;
-  width: 100%;
+  width: 95%;
   margin: 0 auto;
 }
 
@@ -184,4 +194,79 @@ nav.flexMenu a.active {
 footer {
   text-align: center;
   color: var(--secondary-dark-text-color);
+}
+
+/* ------------------- MEDIA QUERIES ------------------- */
+
+/* Less than 360 */
+
+/* @media screen and (min-width: 360px) {
+  .wrapper {
+  }
+} */
+
+/* From 361 to 960 */
+
+/* @media screen and (min-width: 961px) {
+  .wrapper {
+    width: 90%;
+
+    background-color: green;
+  }
+}
+
+/* From 961 to 960 */
+
+/* @media screen and (min-width: 961px) {
+  .wrapper {
+    width: 90%;
+  }
+} */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  ...;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .wrapper {
+    width: 90%;
+  }
+
+  #contact .formWrapper > form > .formGroup:first-of-type {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  #contact .formWrapper > form > .formGroup:first-of-type .formGroup {
+    width: 50%;
+  }
+
+  #contact
+    .formWrapper
+    > form
+    > .formGroup:first-of-type
+    > .formGroup:first-of-type {
+    margin-right: 5%;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .articlesWrapper {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .articlesWrapper h1,
+  .articlesWrapper > div {
+    width: 50%;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  ...;
 }
